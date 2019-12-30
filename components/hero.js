@@ -75,14 +75,15 @@ const Hero = ({title, tagline}) => (
         color: ${theme.darkText};
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 700px), (max-height: 700px) {
         .hero-container {
           position: absolute;
-          top: 200px;
+          top: 230px;
         }
 
         .hero {
           height: 145vh;
+          margin-top:230px;
         }
       }
 
