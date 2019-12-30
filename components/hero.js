@@ -78,7 +78,7 @@ const Hero = ({title, tagline}) => (
       @media (max-width: 700px), (max-height: 700px) {
         .hero-container {
           position: absolute;
-          top: 230px;
+          top: 240px;
         }
 
         .hero {
