@@ -62,7 +62,6 @@ class Commune extends React.Component {
           <CommunePreview commune={commune} />
 
           <div className='list'>
-            {/* <h4>Liste des voies présentes dans le fichier</h4> */}
             <div className='voies'>
               <VoiesCommuneBases voies={commune.voies} />
             </div>
