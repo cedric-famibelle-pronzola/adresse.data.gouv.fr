@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import theme from '../../../../../../../styles/theme'
 import TagsInput from './tags-input'
-import theme from '../../../../../../../styles/theme';
 
 class TableList extends React.Component {
   static propTypes = {

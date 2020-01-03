@@ -17,8 +17,7 @@ import ProducerDiscussion from '../producer-discussion'
 
 import Breadcrumb from './breadcrumb'
 import CommunePreview from './commune-preview'
-import VoiesTableBases from './voies-table-bases'
-import VoiesCommuneBases from './voies-commune-bases';
+import VoiesCommuneBases from './voies-commune-bases'
 
 class Commune extends React.Component {
   static propTypes = {

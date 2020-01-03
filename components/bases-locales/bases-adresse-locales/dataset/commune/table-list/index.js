@@ -1,23 +1,16 @@
 import React, {useState, useCallback, useEffect} from 'react'
 import PropTypes from 'prop-types'
 
-import { byTags, byText } from '../../../../../../lib/filters'
-import { getTypeByPriority, unionTypes } from '../../../../../../lib/types';
+import {byTags, byText} from '../../../../../../lib/filters'
 
 import Title from './title'
 import TableControl from './table-control'
 import Filters from './filters'
 
-
 const TableList = ({title, list, headers, genItems, subtitle, initialSort, selected, handleSelect}) => {
   const [text, setText] = useState('')
   const [selectedTags, setSelectedTags] = useState([])
-  const [sources, setSources] = useState([])
   const [filteredList, setFilteredList] = useState([])
-
-  const getSources = sources => {
-    return getTypeByPriority(unionTypes(sources))
-  }
 
   const handleTextFilter = text => {
     setText(text)
@@ -51,13 +44,6 @@ const TableList = ({title, list, headers, genItems, subtitle, initialSort, selec
     const filteredList = filterList()
     setFilteredList(filteredList)
   }, [filterList, list, selectedTags])
-
-  useEffect(() => {
-    if (filteredList) {
-      const sources = getSources(filteredList.map(({sources}) => sources))
-      setSources(sources)
-    }
-  }, [filteredList])
 
   return (
     <div>

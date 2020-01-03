@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
-import TableList from './table-list';
-
-
+import TableList from './table-list'
 
 class VoiesTableBases extends React.Component {
   static propTypes = {

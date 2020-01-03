@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CheckboxInput from './checkbox-input';
+import CheckboxInput from './checkbox-input'
 
 class TagsInput extends React.Component {
   static propTypes = {
