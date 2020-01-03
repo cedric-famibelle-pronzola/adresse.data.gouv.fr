@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Router from 'next/router'
 
-import withFetch from '../../hoc/with-fetch'
 
-import VoiesTable from './voies-table'
+import withFetch from '../../../../hoc/with-fetch';
+import VoiesTableBases from './voies-table-bases';
 
-class VoiesCommune extends React.Component {
+class VoiesCommuneBases extends React.Component {
   static propTypes = {
     voies: PropTypes.array
   }
@@ -15,20 +15,20 @@ class VoiesCommune extends React.Component {
     voies: []
   }
 
-  handleSelect = voie => {
-    Router.push(
-      `/commune/voie?idVoie=${voie.idVoie}`,
-      `/explore/commune/${voie.codeCommune}/voie/${voie.idVoie}`
-    )
-  }
+  // handleSelect = voie => {
+  //   Router.push(
+  //     `/bases-locales/jeux-de-donnees/${voie.id}/${voie.codeCommune}/${voie.codeVoie}`
+  //   )
+  // }
 
   render() {
+    console.log(this.props)
     const {voies} = this.props
 
     return (
       <div className='voies'>
         {console.log(voies)}
-        <VoiesTable voies={voies} onSelect={this.handleSelect} />
+        <VoiesTableBases voies={voies}/>
         <style jsx>{`
           .voies {
             margin-top: 2em;
@@ -39,6 +39,4 @@ class VoiesCommune extends React.Component {
   }
 }
 
-export default withFetch(data => ({
-  voies: data.voies
-}))(VoiesCommune)
+export default VoiesCommuneBases
